@@ -1,0 +1,22 @@
+@yorit.api_HostAddress = http://localhost:5210
+
+
+### Get all image sources
+GET {{yorit.api_HostAddress}}/api/imagesources
+Accept: application/json
+
+### Add a new image source
+POST {{yorit.api_HostAddress}}/api/imagesources
+Content-Type: application/json
+
+{
+  "path": "relative/path/to/images",
+  "displayName": "Sample Image Source"
+}
+
+### Get a single image source (replace {id} with an actual GUID from the POST response)
+GET {{yorit.api_HostAddress}}/api/imagesources/0d83327d-223b-4270-ac0d-888c6d077c38
+Accept: application/json
+
+### Delete an image source (replace ID with actual GUID)
+DELETE {{yorit.api_HostAddress}}/api/imagesources/0d83327d-223b-4270-ac0d-888c6d077c38
